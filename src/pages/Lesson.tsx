@@ -139,6 +139,9 @@ function Hi({ pack, onDone }: { pack: Pack; onDone: () => void }) {
   );
 }
 
+/** How long the child's turn to say a new word waits for a tap before moving on by itself. */
+const TURN_TIMEOUT = 10000;
+
 /** Meet a new word: it pops in big, teacher names it, Sprout plays with it, then "Your turn!". */
 function Meet({ pack, w, lead, onDone }: { pack: Pack; w: Word; lead?: string; onDone: () => void }) {
   const [shown, setShown] = useState(!lead);
@@ -147,6 +150,7 @@ function Meet({ pack, w, lead, onDone }: { pack: Pack; w: Word; lead?: string; o
   const [listen, setListen] = useState(false);
   const [replay, setReplay] = useState(0);
   const art = useRef<HTMLDivElement>(null);
+  const saidIt = useRef<(() => void) | null>(null);
   const L = (line: Parameters<typeof lineUrl>[2]) => lineUrl(pack.lang, w.id, line);
 
   useSequence(async (scope) => {
@@ -173,8 +177,15 @@ function Meet({ pack, w, lead, onDone }: { pack: Pack; w: Word; lead?: string; o
     setPulse("");
     setMood("think");
     if (!await scope.say([globalUrl(pack.lang, "yourTurn"), L("word")])) return;
-    setListen(true); // a pause for the child to say it; we don't record or score speech
-    if (!await scope.wait(1800)) return;
+    // The child's turn to say it. We don't record or score speech, so we can't hear whether they
+    // spoke: wait until they (or the parent) tap the arrow, and only move on alone after a long pause.
+    setListen(true);
+    const tapped = new Promise<boolean>((resolve) => {
+      saidIt.current = () => resolve(true);
+    });
+    const ready = await Promise.race([scope.wait(TURN_TIMEOUT), tapped]);
+    saidIt.current = null;
+    if (!ready) return;
     setListen(false);
     setMood("happy");
     void cue("ding");
@@ -189,6 +200,13 @@ function Meet({ pack, w, lead, onDone }: { pack: Pack; w: Word; lead?: string; o
         {shown && <Sticker word={w} state={pulse} onTap={() => setReplay((n) => n + 1)} />}
         {listen && <Icon name="ear" className="listen" />}
       </div>
+      {listen && (
+        <button className="turn-next" onClick={() => saidIt.current?.()} aria-label="I said it, continue">
+          <svg viewBox="0 0 48 48" aria-hidden>
+            <path d="M10 24h27M25 11l13 13-13 13" />
+          </svg>
+        </button>
+      )}
     </div>
   );
 }

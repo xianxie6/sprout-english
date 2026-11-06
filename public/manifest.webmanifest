@@ -1,0 +1,10 @@
+{
+  "name": "芽芽英语 Sprout English",
+  "short_name": "芽芽英语",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FFF8EC",
+  "theme_color": "#FFF8EC",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

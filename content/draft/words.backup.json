@@ -1,0 +1,404 @@
+{
+  "themes": [
+    {
+      "id": "farm",
+      "zh": "动物农场",
+      "emoji": "🐮",
+      "scene": "a sunny farm: a big plain sky-blue sky with two flat white rounded clouds and a simple yellow sun, wide soft green rolling hills as flat bands of color, a few lollipop trees, a small simple red barn with a short fence at the far left edge"
+    },
+    {
+      "id": "food",
+      "zh": "好吃的",
+      "emoji": "🍎",
+      "scene": "a cozy kitchen: a pale yellow wall with a round window showing blue sky, a few simple pastel cabinets and a hanging lamp at the top, a long light wooden table across the bottom third"
+    }
+  ],
+  "words": [
+    {
+      "id": "cat",
+      "theme": "farm",
+      "zh": "猫",
+      "emoji": "🐱",
+      "kind": "animal",
+      "art": "a chubby orange kitten sitting, waving one paw, tail curled up beside it, head almost as big as its body",
+      "en": {
+        "word": "cat",
+        "intro": "A cat!",
+        "say": "Meow! The cat says meow.",
+        "find": "Where is the cat?",
+        "found": "You found the cat!",
+        "that": "That's a cat!",
+        "bye": "Cat, bye-bye!"
+      },
+      "tip": "看到小猫（绘本、楼下、视频都行）就指着问：Where is the cat? 孩子指对了说：Yes! A cat! 再一起学：Meow!"
+    },
+    {
+      "id": "dog",
+      "theme": "farm",
+      "zh": "狗",
+      "emoji": "🐶",
+      "kind": "animal",
+      "art": "a round brown-and-cream puppy with floppy ears, sitting, small pink tongue out happily",
+      "en": {
+        "word": "dog",
+        "intro": "A dog!",
+        "say": "Woof woof! The dog says woof.",
+        "find": "Where is the dog?",
+        "found": "You found the dog!",
+        "that": "That's a dog!",
+        "bye": "Dog, bye-bye!"
+      },
+      "tip": "遛弯遇到小狗时，蹲下来轻声说：Look, a dog! Woof woof! 回家可以玩“学小狗”：你说 dog，孩子学 Woof。"
+    },
+    {
+      "id": "cow",
+      "theme": "farm",
+      "zh": "奶牛",
+      "emoji": "🐮",
+      "kind": "animal",
+      "art": "a chubby white cow with a few round black patches, pink muzzle, two tiny horns, standing",
+      "en": {
+        "word": "cow",
+        "intro": "A cow!",
+        "say": "Moo! The cow says moo.",
+        "find": "Where is the cow?",
+        "found": "You found the cow!",
+        "that": "That's a cow!",
+        "bye": "Cow, bye-bye!"
+      },
+      "tip": "喝牛奶时顺口说：Milk comes from the cow. Moo! 让孩子也 Moo 一声。"
+    },
+    {
+      "id": "pig",
+      "theme": "farm",
+      "zh": "小猪",
+      "emoji": "🐷",
+      "kind": "animal",
+      "art": "a round pink pig seen from the front, small round snout in the middle of its face, tiny ears, curly tail, standing",
+      "en": {
+        "word": "pig",
+        "intro": "A pig!",
+        "say": "Oink oink! The pig says oink.",
+        "find": "Where is the pig?",
+        "found": "You found the pig!",
+        "that": "That's a pig!",
+        "bye": "Pig, bye-bye!"
+      },
+      "tip": "洗澡时捏捏小鼻子说：Oink oink! You're a little pig! 孩子会觉得很好玩。"
+    },
+    {
+      "id": "duck",
+      "theme": "farm",
+      "zh": "鸭子",
+      "emoji": "🦆",
+      "kind": "animal",
+      "art": "a round yellow duckling with an orange beak and orange feet, little wings slightly raised",
+      "en": {
+        "word": "duck",
+        "intro": "A duck!",
+        "say": "Quack quack! The duck says quack.",
+        "find": "Where is the duck?",
+        "found": "You found the duck!",
+        "that": "That's a duck!",
+        "bye": "Duck, bye-bye!"
+      },
+      "tip": "洗澡放小黄鸭：Where is the duck? 孩子拿起来，你说：Quack quack! Yes, a duck!"
+    },
+    {
+      "id": "chicken",
+      "theme": "farm",
+      "zh": "母鸡",
+      "emoji": "🐔",
+      "kind": "animal",
+      "art": "a round white hen with a red comb, small yellow beak and short orange legs, standing",
+      "en": {
+        "word": "chicken",
+        "intro": "A chicken!",
+        "say": "Cluck cluck! The chicken says cluck.",
+        "find": "Where is the chicken?",
+        "found": "You found the chicken!",
+        "that": "That's a chicken!",
+        "bye": "Chicken, bye-bye!"
+      },
+      "tip": "早餐吃鸡蛋时说：The chicken says cluck cluck. 可以张开手臂学小鸡扇翅膀。"
+    },
+    {
+      "id": "sheep",
+      "theme": "farm",
+      "zh": "绵羊",
+      "emoji": "🐑",
+      "kind": "animal",
+      "art": "a round sheep with a puffy cloud-shaped white wool body, cream face and little dark legs, standing",
+      "en": {
+        "word": "sheep",
+        "intro": "A sheep!",
+        "say": "Baa! The sheep says baa.",
+        "find": "Where is the sheep?",
+        "found": "You found the sheep!",
+        "that": "That's a sheep!",
+        "bye": "Sheep, bye-bye!"
+      },
+      "tip": "摸毛绒玩具或毛衣时说：So soft, like a sheep. Baa!"
+    },
+    {
+      "id": "horse",
+      "theme": "farm",
+      "zh": "马",
+      "emoji": "🐴",
+      "kind": "animal",
+      "art": "a chubby brown pony with a cream mane, standing on four short legs, seen from the front",
+      "en": {
+        "word": "horse",
+        "intro": "A horse!",
+        "say": "Neigh! The horse says neigh.",
+        "find": "Where is the horse?",
+        "found": "You found the horse!",
+        "that": "That's a horse!",
+        "bye": "Horse, bye-bye!"
+      },
+      "tip": "让孩子骑在你腿上颠一颠：Ride the horse! Neigh! 孩子通常会要求“再来一次”，正好多说几遍。"
+    },
+    {
+      "id": "rabbit",
+      "theme": "farm",
+      "zh": "兔子",
+      "emoji": "🐰",
+      "kind": "animal",
+      "art": "a round white bunny with long pink-lined ears, sitting and holding a tiny carrot",
+      "en": {
+        "word": "rabbit",
+        "intro": "A rabbit!",
+        "say": "Hop hop! The rabbit can hop.",
+        "find": "Where is the rabbit?",
+        "found": "You found the rabbit!",
+        "that": "That's a rabbit!",
+        "bye": "Rabbit, bye-bye!"
+      },
+      "tip": "和孩子一起跳一跳：Hop hop, like a rabbit! 说一次 hop 就跳一下。"
+    },
+    {
+      "id": "mouse",
+      "theme": "farm",
+      "zh": "老鼠",
+      "emoji": "🐭",
+      "kind": "animal",
+      "art": "a small round gray mouse with big round pink ears and a thin curly tail, sitting",
+      "en": {
+        "word": "mouse",
+        "intro": "A mouse!",
+        "say": "Squeak squeak! The mouse says squeak.",
+        "find": "Where is the mouse?",
+        "found": "You found the mouse!",
+        "that": "That's a mouse!",
+        "bye": "Mouse, bye-bye!"
+      },
+      "tip": "玩捉迷藏时小声说：Shh, quiet like a mouse. Squeak!"
+    },
+    {
+      "id": "apple",
+      "theme": "food",
+      "zh": "苹果",
+      "emoji": "🍎",
+      "kind": "food",
+      "art": "a round red apple with a short brown stem and one green leaf, no face",
+      "en": {
+        "word": "apple",
+        "intro": "An apple!",
+        "say": "Crunch! A red apple. Yummy!",
+        "find": "Where is the apple?",
+        "found": "You found the apple!",
+        "that": "That's an apple!",
+        "bye": "Apple, bye-bye!"
+      },
+      "tip": "吃苹果前举起来问：What's this? 停两秒，等孩子说或你说：An apple! 咬一口：Crunch!"
+    },
+    {
+      "id": "banana",
+      "theme": "food",
+      "zh": "香蕉",
+      "emoji": "🍌",
+      "kind": "food",
+      "art": "a single curved yellow banana, half peeled, no face",
+      "en": {
+        "word": "banana",
+        "intro": "A banana!",
+        "say": "A yellow banana. Peel, peel, yum!",
+        "find": "Where is the banana?",
+        "found": "You found the banana!",
+        "that": "That's a banana!",
+        "bye": "Banana, bye-bye!"
+      },
+      "tip": "剥香蕉时一边剥一边说：Peel, peel, peel. A banana! 让孩子帮忙剥最后一下。"
+    },
+    {
+      "id": "orange",
+      "theme": "food",
+      "zh": "橙子",
+      "emoji": "🍊",
+      "kind": "food",
+      "art": "a round orange fruit with a tiny green leaf on top, next to one orange slice, no face",
+      "en": {
+        "word": "orange",
+        "intro": "An orange!",
+        "say": "A round orange. So juicy!",
+        "find": "Where is the orange?",
+        "found": "You found the orange!",
+        "that": "That's an orange!",
+        "bye": "Orange, bye-bye!"
+      },
+      "tip": "切橙子时说：An orange. It's orange! 指指颜色，孩子会发现同一个词两种意思。"
+    },
+    {
+      "id": "grapes",
+      "theme": "food",
+      "zh": "葡萄",
+      "emoji": "🍇",
+      "kind": "food",
+      "art": "a bunch of round purple grapes with a small green stem and leaf, no face",
+      "en": {
+        "word": "grapes",
+        "intro": "Grapes!",
+        "say": "Purple grapes. Pop, pop, yum!",
+        "find": "Where are the grapes?",
+        "found": "You found the grapes!",
+        "that": "Those are grapes!",
+        "bye": "Grapes, bye-bye!"
+      },
+      "tip": "吃葡萄时一颗一颗数：One grape, two grapes... 数到三就很好。"
+    },
+    {
+      "id": "milk",
+      "theme": "food",
+      "zh": "牛奶",
+      "emoji": "🥛",
+      "kind": "food",
+      "art": "a rounded glass of white milk with a little milk splash on top, no face",
+      "en": {
+        "word": "milk",
+        "intro": "Milk!",
+        "say": "Glug glug! I drink milk.",
+        "find": "Where is the milk?",
+        "found": "You found the milk!",
+        "that": "That's milk!",
+        "bye": "Milk, bye-bye!"
+      },
+      "tip": "递牛奶时问：Do you want milk? 等孩子点头或说 yes，再递给他：Here's your milk."
+    },
+    {
+      "id": "water",
+      "theme": "food",
+      "zh": "水",
+      "emoji": "💧",
+      "kind": "food",
+      "art": "a rounded clear glass of light blue water with two bubbles and a water drop beside it, no face",
+      "en": {
+        "word": "water",
+        "intro": "Water!",
+        "say": "Sip, sip! I drink water.",
+        "find": "Where is the water?",
+        "found": "You found the water!",
+        "that": "That's water!",
+        "bye": "Water, bye-bye!"
+      },
+      "tip": "孩子要喝水时，先说 water 再给：Water? Here you are. 慢慢地孩子会自己说 water。"
+    },
+    {
+      "id": "bread",
+      "theme": "food",
+      "zh": "面包",
+      "emoji": "🍞",
+      "kind": "food",
+      "art": "a puffy loaf of golden-brown bread with one slice beside it, no face",
+      "en": {
+        "word": "bread",
+        "intro": "Bread!",
+        "say": "Soft bread. Yum yum!",
+        "find": "Where is the bread?",
+        "found": "You found the bread!",
+        "that": "That's bread!",
+        "bye": "Bread, bye-bye!"
+      },
+      "tip": "早餐时问：Bread or egg? 让孩子指一指选，你把他选的词再说一遍。"
+    },
+    {
+      "id": "egg",
+      "theme": "food",
+      "zh": "鸡蛋",
+      "emoji": "🥚",
+      "kind": "food",
+      "art": "one plain white egg (a smooth blank oval with no features, no eyes, no cheeks, no mouth) standing next to a sunny-side-up fried egg (white and yellow only, no face)",
+      "en": {
+        "word": "egg",
+        "intro": "An egg!",
+        "say": "An egg! I like eggs.",
+        "find": "Where is the egg?",
+        "found": "You found the egg!",
+        "that": "That's an egg!",
+        "bye": "Egg, bye-bye!"
+      },
+      "tip": "煮鸡蛋时让孩子摸一摸：An egg. Crack! 剥壳时再说一次 egg。"
+    },
+    {
+      "id": "cake",
+      "theme": "food",
+      "zh": "蛋糕",
+      "emoji": "🎂",
+      "kind": "food",
+      "art": "a round two-layer birthday cake with pink frosting, a cherry on top and one candle, no face",
+      "en": {
+        "word": "cake",
+        "intro": "A cake!",
+        "say": "A birthday cake. Happy birthday!",
+        "find": "Where is the cake?",
+        "found": "You found the cake!",
+        "that": "That's a cake!",
+        "bye": "Cake, bye-bye!"
+      },
+      "tip": "过生日或吃小蛋糕时一起唱：Happy birthday to you! 然后说：Yummy cake!"
+    },
+    {
+      "id": "cookie",
+      "theme": "food",
+      "zh": "饼干",
+      "emoji": "🍪",
+      "kind": "food",
+      "art": "a big round golden cookie with chocolate chips, one small bite taken out, no face",
+      "en": {
+        "word": "cookie",
+        "intro": "A cookie!",
+        "say": "Crunch crunch! A yummy cookie.",
+        "find": "Where is the cookie?",
+        "found": "You found the cookie!",
+        "that": "That's a cookie!",
+        "bye": "Cookie, bye-bye!"
+      },
+      "tip": "给饼干前举在面前：Cookie? 孩子说或点头后：Here's a cookie! 吃完问：More cookie?"
+    }
+  ],
+  "global": {
+    "hello": "Hello! I'm Sprout! Let's play!",
+    "tap": "Tap me to start!",
+    "great": "Great job!",
+    "yay": "Yay! You did it!",
+    "super": "Super!",
+    "again": "Let's try again!",
+    "look": "Look! Here it is.",
+    "sleepy": "I'm sleepy. Bye-bye! See you tomorrow!",
+    "farm": "Welcome to the farm!",
+    "food": "Yummy! Let's eat!",
+    "lessonHi": "Hi friend! Let's learn today!",
+    "remember": "Do you remember?",
+    "newFriend": "Look! A new friend!",
+    "yourTurn": "Your turn! Can you say it?",
+    "letsPlay": "Let's play a game!",
+    "parade": "Let's say them all!",
+    "garden": "Look! Your garden is growing!",
+    "goodNight": "Good night. Let's say our words.",
+    "sleepTight": "Good night! Sleep tight!",
+    "shh": "Shh. Sprout is sleeping.",
+    "move-hop": "Hop like a rabbit! Hop, hop! Your turn!",
+    "move-flap": "Flap your wings like a chicken! Flap, flap! Your turn!",
+    "move-stretch": "Stretch like a cat! Stretch up high! Your turn!",
+    "move-march": "March like a horse! March, march! Your turn!"
+  }
+}

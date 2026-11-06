@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>芽芽英语风格样板</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF8EC; --cream-2:#FFEFD6; --card:#FFFFFF;
+  --plum:#4A3B63; --plum-2:#7A6B92; --plum-3:#B8AECB;
+  --tomato:#FF7A59; --sun:#FFC94D; --grass:#7BC67E; --sky:#5EB8F0; --berry:#F48FB1; --grape:#A98BE8;
+  --leaf:#5DBB63; --bean:#B6E07E;
+  --r:28px;
+  --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --round:"Fredoka",var(--sans);
+  --read:"Andika",var(--sans);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--plum);font-family:var(--sans);line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding:48px 16px 96px}
+h1{font-family:var(--round);font-size:clamp(36px,6vw,64px);margin:0;line-height:1.1}
+h2{font-family:var(--round);font-size:28px;margin:72px 0 8px}
+.lead{color:var(--plum-2);font-size:17px;max-width:720px}
+.sub{color:var(--plum-2);margin:0 0 24px}
+.hero{display:flex;gap:32px;align-items:center;flex-wrap:wrap}
+.hero svg{width:180px;height:180px;flex:none}
+.bob{animation:bob 2.4s ease-in-out infinite;transform-origin:50% 90%}
+@keyframes bob{0%,100%{transform:translateY(0) scale(1,1)}50%{transform:translateY(-8px) scale(.97,1.03)}}
+
+/* palette */
+.pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.sw{background:var(--card);border-radius:var(--r);padding:12px;box-shadow:0 6px 0 var(--cream-2)}
+.sw i{display:block;height:84px;border-radius:20px;border:4px solid var(--plum)}
+.sw b{display:block;margin-top:10px;font-family:var(--round)}
+.sw span{font-size:13px;color:var(--plum-2)}
+
+/* type */
+.type{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.tcard{background:var(--card);border-radius:var(--r);padding:24px;box-shadow:0 6px 0 var(--cream-2)}
+.tcard .big{font-size:56px;line-height:1.1;margin:8px 0}
+.tag{display:inline-block;font-size:12px;background:var(--cream-2);border-radius:99px;padding:2px 10px;color:var(--plum-2)}
+
+/* mascot states */
+.states{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px}
+.st{background:var(--card);border-radius:var(--r);padding:16px 8px 12px;text-align:center;box-shadow:0 6px 0 var(--cream-2)}
+.st svg{width:110px;height:110px}
+.st b{display:block;font-family:var(--round)}
+.st span{font-size:13px;color:var(--plum-2)}
+
+/* sticker */
+.stickers{display:flex;gap:20px;flex-wrap:wrap}
+.stk{width:130px;text-align:center}
+.stk .disc{width:130px;height:130px;border-radius:50%;background:#fff;border:5px solid var(--plum);display:grid;place-items:center;font-size:68px;box-shadow:0 8px 0 rgba(74,59,99,.15);transition:transform .25s cubic-bezier(.34,1.6,.5,1);cursor:pointer}
+.stk .disc:hover{transform:scale(1.1) rotate(-4deg)}
+.stk .w{font-family:var(--read);font-size:24px;margin-top:6px}
+
+/* device mockups */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(460px,1fr));gap:28px}
+@media (max-width:520px){.grid{grid-template-columns:1fr}}
+figure{margin:0}
+figcaption{margin-top:12px;font-size:15px}
+figcaption b{font-family:var(--round);font-size:18px;display:block}
+.tablet{background:var(--plum);border-radius:36px;padding:14px;box-shadow:0 18px 40px -18px rgba(74,59,99,.5)}
+.screen{position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:var(--sky)}
+.screen svg.bg{position:absolute;inset:0;width:100%;height:100%}
+.abs{position:absolute}
+.bubble{background:#fff;border:4px solid var(--plum);border-radius:24px;padding:6px 16px;font-family:var(--read);font-weight:700;font-size:clamp(14px,2.2vw,22px);white-space:nowrap}
+.bubble .spk{display:inline-block;width:1.1em;height:1.1em;vertical-align:-3px;margin-right:6px}
+.chip{background:#fff;border:4px solid var(--plum);border-radius:50%;display:grid;place-items:center;box-shadow:0 5px 0 rgba(74,59,99,.2)}
+.homebtn{width:44px;height:44px;border-radius:50%;background:#fff;border:4px solid var(--plum);display:grid;place-items:center;font-size:20px}
+.note{font-size:13px;color:var(--plum-2);margin-top:24px}
+.phone{max-width:300px;margin:0 auto;background:var(--plum);border-radius:40px;padding:12px}
+.pscreen{background:#FBF7F1;border-radius:30px;padding:20px 16px;font-size:13px;min-height:520px}
+.pscreen h4{margin:0 0 4px;font-size:18px}
+.prow{background:#fff;border-radius:16px;padding:12px;margin-top:10px;box-shadow:0 2px 0 #F0E7DA}
+.prow .k{color:var(--plum-2);font-size:12px}
+.pill{display:inline-block;background:var(--cream-2);border-radius:99px;padding:2px 10px;margin:4px 4px 0 0;font-family:var(--read)}
+.dont{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.dont div{background:var(--card);border-radius:var(--r);padding:20px;box-shadow:0 6px 0 var(--cream-2)}
+.dont h3{margin:0 0 6px;font-family:var(--round)}
+.dont ul{margin:0;padding-left:20px}
+</style>
+</head>
+<body>
+
+<!-- 芽芽：可复用的角色符号 -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="sprout-body" viewBox="0 0 200 200">
+      <path d="M100 58 C100 40 98 30 92 20" fill="none" stroke="#4A3B63" stroke-width="6" stroke-linecap="round"/>
+      <path d="M93 22 C70 4 44 14 40 30 C62 38 84 36 93 22Z" fill="#5DBB63" stroke="#4A3B63" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M95 26 C110 6 138 8 146 22 C128 34 106 36 95 26Z" fill="#7BC67E" stroke="#4A3B63" stroke-width="6" stroke-linejoin="round"/>
+      <ellipse cx="72" cy="182" rx="20" ry="11" fill="#9CCB62" stroke="#4A3B63" stroke-width="6"/>
+      <ellipse cx="128" cy="182" rx="20" ry="11" fill="#9CCB62" stroke="#4A3B63" stroke-width="6"/>
+      <ellipse cx="100" cy="118" rx="72" ry="64" fill="#B6E07E" stroke="#4A3B63" stroke-width="6"/>
+      <ellipse cx="80" cy="84" rx="22" ry="10" fill="#fff" opacity=".45" transform="rotate(-20 80 84)"/>
+    </symbol>
+    <symbol id="face-happy" viewBox="0 0 200 200">
+      <ellipse cx="76" cy="112" rx="9" ry="12" fill="#4A3B63"/><circle cx="79" cy="107" r="3.5" fill="#fff"/>
+      <ellipse cx="124" cy="112" rx="9" ry="12" fill="#4A3B63"/><circle cx="127" cy="107" r="3.5" fill="#fff"/>
+      <ellipse cx="58" cy="134" rx="11" ry="7" fill="#F48FB1" opacity=".8"/><ellipse cx="142" cy="134" rx="11" ry="7" fill="#F48FB1" opacity=".8"/>
+      <path d="M86 136 Q100 152 114 136" fill="#FF7A59" stroke="#4A3B63" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+
+<section class="hero">
+  <svg viewBox="0 0 200 200" class="bob" aria-label="芽芽"><use href="#sprout-body"/><use href="#face-happy"/></svg>
+  <div>
+    <span class="tag">风格样板 v0.1 · 草稿</span>
+    <h1>芽芽英语<br><span style="font-size:.55em;color:var(--plum-2)">Sprout English · 2–6 岁</span></h1>
+    <p class="lead">圆滚滚的绘本贴纸风：暖奶油底、暖紫粗描边、白色贴纸边、六个明亮但不刺眼的颜色。孩子端几乎没有字，一切靠画面、声音和动作。</p>
+  </div>
+</section>
+
+<h2>颜色</h2>
+<p class="sub">深色用暖紫代替纯黑，整体高饱和但不霓虹。</p>
+<div class="pal">
+  <div class="sw"><i style="background:var(--cream)"></i><b>奶油底 Cream</b><span>#FFF8EC 背景</span></div>
+  <div class="sw"><i style="background:var(--plum)"></i><b>暖紫 Plum</b><span>#4A3B63 描边/文字</span></div>
+  <div class="sw"><i style="background:var(--tomato)"></i><b>番茄红 Tomato</b><span>#FF7A59 主按钮</span></div>
+  <div class="sw"><i style="background:var(--sun)"></i><b>阳光黄 Sun</b><span>#FFC94D 奖励/高亮</span></div>
+  <div class="sw"><i style="background:var(--grass)"></i><b>草地绿 Grass</b><span>#7BC67E 芽芽/成长</span></div>
+  <div class="sw"><i style="background:var(--sky)"></i><b>天空蓝 Sky</b><span>#5EB8F0 场景天空</span></div>
+  <div class="sw"><i style="background:var(--berry)"></i><b>莓果粉 Berry</b><span>#F48FB1 腮红/点缀</span></div>
+  <div class="sw"><i style="background:var(--grape)"></i><b>葡萄紫 Grape</b><span>#A98BE8 晚安模式</span></div>
+</div>
+
+<h2>字体</h2>
+<p class="sub">孩子看到的英文一律用单层 a / g 的识字字体。</p>
+<div class="type">
+  <div class="tcard"><span class="tag">英文单词 · Andika</span><div class="big" style="font-family:var(--read)">apple · dog · grapes</div><p class="sub" style="margin:0">专为识字设计：a、g 是孩子以后学写的样子，l 和 I 也容易区分。</p></div>
+  <div class="tcard"><span class="tag">标题 / 数字 · Fredoka</span><div class="big" style="font-family:var(--round);font-weight:700">Hello! 1 2 3</div><p class="sub" style="margin:0">圆头圆角，用在标题、数字和家长端英文标题。</p></div>
+  <div class="tcard"><span class="tag">家长端中文 · 苹方</span><div class="big" style="font-size:40px;font-weight:600">今天学了 5 个词</div><p class="sub" style="margin:0">家长端信息密度正常，用系统字体保证清晰。</p></div>
+</div>
+
+<h2>主角 · 芽芽的状态</h2>
+<p class="sub">一颗头顶长叶子的小豆子，对应“小芽 → 小苗 → 小树”三个阶段。下面是 6 个基础状态的方向草稿。</p>
+<div class="states">
+  <div class="st"><svg viewBox="0 0 200 200" class="bob"><use href="#sprout-body"/><use href="#face-happy"/></svg><b>待机</b><span>呼吸、眨眼</span></div>
+  <div class="st"><svg viewBox="0 0 200 200"><g transform="translate(0,-14)"><use href="#sprout-body"/>
+    <path d="M66 112 Q76 100 86 112" fill="none" stroke="#4A3B63" stroke-width="6" stroke-linecap="round"/><path d="M114 112 Q124 100 134 112" fill="none" stroke="#4A3B63" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="58" cy="134" rx="11" ry="7" fill="#F48FB1"/><ellipse cx="142" cy="134" rx="11" ry="7" fill="#F48FB1"/>
+    <path d="M82 132 Q100 162 118 132Z" fill="#FF7A59" stroke="#4A3B63" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M30 108 L14 84" stroke="#4A3B63" stroke-width="10" stroke-linecap="round"/><path d="M170 108 L186 84" stroke="#4A3B63" stroke-width="10" stroke-linecap="round"/></g>
+    <path d="M60 196 h80" stroke="#B8AECB" stroke-width="6" stroke-linecap="round"/></svg><b>开心</b><span>答对时跳起来</span></div>
+  <div class="st"><svg viewBox="0 0 200 200"><g transform="rotate(-8 100 120)"><use href="#sprout-body"/>
+    <ellipse cx="76" cy="110" rx="9" ry="12" fill="#4A3B63"/><ellipse cx="124" cy="110" rx="9" ry="12" fill="#4A3B63"/><circle cx="72" cy="105" r="3.5" fill="#fff"/><circle cx="120" cy="105" r="3.5" fill="#fff"/>
+    <ellipse cx="58" cy="134" rx="11" ry="7" fill="#F48FB1" opacity=".8"/><ellipse cx="142" cy="134" rx="11" ry="7" fill="#F48FB1" opacity=".8"/>
+    <circle cx="100" cy="142" r="6" fill="#4A3B63"/></g>
+    <text x="160" y="56" font-family="Fredoka" font-weight="700" font-size="40" fill="#A98BE8">?</text></svg><b>思考</b><span>提问时歪头</span></div>
+  <div class="st"><svg viewBox="0 0 200 200"><use href="#sprout-body"/><use href="#face-happy"/>
+    <rect x="152" y="96" width="30" height="34" rx="12" fill="#FFC94D" stroke="#4A3B63" stroke-width="5"/><rect x="160" y="74" width="12" height="28" rx="6" fill="#FFC94D" stroke="#4A3B63" stroke-width="5"/></svg><b>鼓励</b><span>“Good try!”</span></div>
+  <div class="st"><svg viewBox="0 0 200 200"><use href="#sprout-body"/>
+    <path d="M66 114 Q76 122 86 114" fill="none" stroke="#4A3B63" stroke-width="6" stroke-linecap="round"/><path d="M114 114 Q124 122 134 114" fill="none" stroke="#4A3B63" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="58" cy="134" rx="11" ry="7" fill="#F48FB1" opacity=".6"/><ellipse cx="142" cy="134" rx="11" ry="7" fill="#F48FB1" opacity=".6"/>
+    <ellipse cx="100" cy="144" rx="9" ry="11" fill="#FF7A59" stroke="#4A3B63" stroke-width="5"/>
+    <text x="146" y="62" font-family="Fredoka" font-weight="700" font-size="28" fill="#A98BE8">z</text><text x="166" y="40" font-family="Fredoka" font-weight="700" font-size="20" fill="#A98BE8">z</text></svg><b>困了</b><span>到时间说再见</span></div>
+  <div class="st"><svg viewBox="0 0 200 200"><use href="#sprout-body"/><use href="#face-happy"/>
+    <circle cx="26" cy="96" r="14" fill="#B6E07E" stroke="#4A3B63" stroke-width="5"/><circle cx="174" cy="96" r="14" fill="#B6E07E" stroke="#4A3B63" stroke-width="5"/>
+    <path d="M8 74 l-8 -6 M14 64 l-2 -10 M44 72 l6 -8" stroke="#FFC94D" stroke-width="5" stroke-linecap="round"/><path d="M192 74 l8 -6 M186 64 l2 -10 M156 72 l-6 -8" stroke="#FFC94D" stroke-width="5" stroke-linecap="round"/></svg><b>做动作</b><span>clap / jump / wave</span></div>
+</div>
+
+<h2>贴纸物件</h2>
+<p class="sub">每个词是一张独立的透明底贴纸：白边 + 暖紫描边，点击放大回弹并发声。（这里用表情符号占位，正式版用统一画风生成的插画。）</p>
+<div class="stickers">
+  <div class="stk"><div class="disc">🐱</div><div class="w">cat</div></div>
+  <div class="stk"><div class="disc">🍎</div><div class="w">apple</div></div>
+  <div class="stk"><div class="disc">🐘</div><div class="w">elephant</div></div>
+  <div class="stk"><div class="disc">⚽</div><div class="w">ball</div></div>
+  <div class="stk"><div class="disc">🌙</div><div class="w">moon</div></div>
+</div>
+
+<h2>关键页面</h2>
+<p class="sub">平板横屏为主。每屏可点元素：小芽阶段 2 个，最多 4 个；点击目标 ≥ 80pt。</p>
+<div class="grid">
+
+  <!-- 主岛 -->
+  <figure>
+    <div class="tablet"><div class="screen">
+      <svg class="bg" viewBox="0 0 400 300" preserveAspectRatio="none">
+        <rect width="400" height="300" fill="#8FD0F5"/>
+        <circle cx="300" cy="50" r="24" fill="#FFC94D" stroke="#4A3B63" stroke-width="3"/>
+        <ellipse cx="80" cy="50" rx="34" ry="12" fill="#fff"/><ellipse cx="250" cy="34" rx="26" ry="9" fill="#fff"/>
+        <rect y="200" width="400" height="100" fill="#5EB8F0"/>
+        <ellipse cx="200" cy="190" rx="190" ry="92" fill="#7BC67E" stroke="#4A3B63" stroke-width="4"/>
+        <path d="M70 200 Q140 150 200 196 T330 180" fill="none" stroke="#FFEFD6" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 16"/>
+      </svg>
+      <div class="abs chip" style="left:12%;top:44%;width:18%;aspect-ratio:1;font-size:clamp(22px,4vw,40px)">🐮</div>
+      <div class="abs chip" style="left:33%;top:30%;width:15%;aspect-ratio:1;font-size:clamp(20px,3.4vw,34px);background:#FFF4C8">🍎</div>
+      <div class="abs chip" style="left:66%;top:34%;width:15%;aspect-ratio:1;font-size:clamp(20px,3.4vw,34px);filter:grayscale(1);opacity:.6">🦁</div>
+      <div class="abs chip" style="left:76%;top:58%;width:13%;aspect-ratio:1;font-size:clamp(18px,3vw,30px);filter:grayscale(1);opacity:.6">🎈</div>
+      <div class="abs" style="left:31%;top:17%;font-size:clamp(14px,2.4vw,22px)">✨</div>
+      <svg class="abs bob" viewBox="0 0 200 200" style="left:42%;top:50%;width:20%"><use href="#sprout-body"/><use href="#face-happy"/></svg>
+      <div class="abs homebtn" style="right:3%;top:4%;opacity:.5" title="家长入口：长按 3 秒">🔒</div>
+    </div></div>
+    <figcaption><b>① 主岛</b>12 个主题是岛上的 12 个地方。学过的亮着，今天推荐的冒星星，没解锁的灰灰的。右上角锁 = 家长入口（长按 3 秒）。</figcaption>
+  </figure>
+
+  <!-- 场景探索 -->
+  <figure>
+    <div class="tablet"><div class="screen">
+      <svg class="bg" viewBox="0 0 400 300" preserveAspectRatio="none">
+        <rect width="400" height="300" fill="#BFE6FA"/>
+        <circle cx="44" cy="100" r="20" fill="#FFC94D" stroke="#4A3B63" stroke-width="3"/>
+        <path d="M0 170 Q100 130 200 160 T400 150 V300 H0Z" fill="#9BD77A" stroke="#4A3B63" stroke-width="4"/>
+        <rect x="270" y="78" width="96" height="86" rx="10" fill="#FF7A59" stroke="#4A3B63" stroke-width="4"/>
+        <path d="M262 84 L318 40 L374 84Z" fill="#E85F3F" stroke="#4A3B63" stroke-width="4" stroke-linejoin="round"/>
+        <rect x="302" y="118" width="32" height="46" rx="6" fill="#FFEFD6" stroke="#4A3B63" stroke-width="4"/>
+        <path d="M20 210 h90 M20 230 h90" stroke="#C9A56B" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <div class="abs chip" style="left:8%;top:52%;width:17%;aspect-ratio:1;font-size:clamp(22px,4vw,40px)">🐷</div>
+      <div class="abs chip" style="left:32%;top:40%;width:22%;aspect-ratio:1;font-size:clamp(28px,5vw,52px);transform:scale(1.1) rotate(-5deg);background:#FFF4C8">🐮</div>
+      <div class="abs chip" style="left:60%;top:62%;width:15%;aspect-ratio:1;font-size:clamp(20px,3.4vw,34px)">🐔</div>
+      <div class="abs chip" style="left:80%;top:64%;width:14%;aspect-ratio:1;font-size:clamp(20px,3.2vw,32px)">🦆</div>
+      <div class="abs bubble" style="left:28%;top:14%"><svg class="spk" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="#4A3B63"/><path d="M16 8a5 5 0 0 1 0 8" fill="none" stroke="#4A3B63" stroke-width="2.5" stroke-linecap="round"/></svg>Moo! A cow!</div>
+      <div class="abs homebtn" style="left:3%;top:4%">🏠</div>
+    </div></div>
+    <figcaption><b>② 场景探索 · 动物农场</b>想点哪个点哪个：被点的动物跳一下、叫一声、说出名字。没有对错，培养“点一下就有回应”的安全感。</figcaption>
+  </figure>
+
+  <!-- 找一找 -->
+  <figure>
+    <div class="tablet"><div class="screen" style="background:var(--cream)">
+      <svg class="bg" viewBox="0 0 400 300" preserveAspectRatio="none">
+        <circle cx="30" cy="270" r="60" fill="#FFEFD6"/><circle cx="380" cy="30" r="50" fill="#FFEFD6"/>
+      </svg>
+      <svg class="abs" viewBox="0 0 200 200" style="left:6%;top:6%;width:17%"><g transform="rotate(-8 100 120)"><use href="#sprout-body"/>
+        <ellipse cx="76" cy="110" rx="9" ry="12" fill="#4A3B63"/><ellipse cx="124" cy="110" rx="9" ry="12" fill="#4A3B63"/><circle cx="72" cy="105" r="3.5" fill="#fff"/><circle cx="120" cy="105" r="3.5" fill="#fff"/>
+        <ellipse cx="58" cy="134" rx="11" ry="7" fill="#F48FB1" opacity=".8"/><ellipse cx="142" cy="134" rx="11" ry="7" fill="#F48FB1" opacity=".8"/><circle cx="100" cy="142" r="6" fill="#4A3B63"/></g></svg>
+      <div class="abs bubble" style="left:25%;top:11%"><svg class="spk" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="#4A3B63"/><path d="M16 8a5 5 0 0 1 0 8" fill="none" stroke="#4A3B63" stroke-width="2.5" stroke-linecap="round"/></svg>Where is the cat?</div>
+      <div class="abs chip" style="left:13%;top:40%;width:32%;aspect-ratio:1;font-size:clamp(44px,8vw,86px);border-radius:36px">🐶</div>
+      <div class="abs chip" style="left:55%;top:40%;width:32%;aspect-ratio:1;font-size:clamp(44px,8vw,86px);border-radius:36px;box-shadow:0 0 0 8px #FFC94D,0 5px 0 rgba(74,59,99,.2)">🐱</div>
+      <div class="abs" style="left:83%;top:36%;font-size:clamp(18px,3vw,30px)">⭐</div>
+    </div></div>
+    <figcaption><b>③ 找一找（2 选 1）</b>芽芽歪头提问。点错时被点的东西说自己的名字（“That's a dog!”），正确答案轻轻晃一下；点对了星星飞进花园。全程没有红叉。</figcaption>
+  </figure>
+
+  <!-- 贴纸花园 -->
+  <figure>
+    <div class="tablet"><div class="screen">
+      <svg class="bg" viewBox="0 0 400 300" preserveAspectRatio="none">
+        <rect width="400" height="300" fill="#FFE7A8"/>
+        <rect y="160" width="400" height="140" fill="#9BD77A" stroke="#4A3B63" stroke-width="4"/>
+        <g stroke="#4A3B63" stroke-width="3">
+          <g transform="translate(50 200)"><path d="M0 0 V40" stroke="#5DBB63" stroke-width="6"/><circle r="16" fill="#FF7A59"/><circle r="6" fill="#FFC94D"/></g>
+          <g transform="translate(110 186)"><path d="M0 0 V52" stroke="#5DBB63" stroke-width="6"/><circle r="18" fill="#F48FB1"/><circle r="7" fill="#FFC94D"/></g>
+          <g transform="translate(170 204)"><path d="M0 0 V38" stroke="#5DBB63" stroke-width="6"/><circle r="15" fill="#A98BE8"/><circle r="6" fill="#FFC94D"/></g>
+          <g transform="translate(230 192)"><path d="M0 0 V48" stroke="#5DBB63" stroke-width="6"/><circle r="17" fill="#5EB8F0"/><circle r="6" fill="#FFC94D"/></g>
+          <g transform="translate(290 224)"><path d="M0 0 V18" stroke="#5DBB63" stroke-width="6"/><ellipse rx="8" ry="11" fill="#7BC67E"/></g>
+          <g transform="translate(345 230)"><path d="M0 0 V12" stroke="#5DBB63" stroke-width="6"/><ellipse rx="6" ry="8" fill="#7BC67E"/></g>
+        </g>
+      </svg>
+      <div class="abs bubble" style="left:20%;top:12%">🌸 cat · apple · ball · moon</div>
+      <svg class="abs bob" viewBox="0 0 200 200" style="left:74%;top:30%;width:15%"><use href="#sprout-body"/><use href="#face-happy"/></svg>
+      <div class="abs homebtn" style="left:3%;top:4%">🏠</div>
+    </div></div>
+    <figcaption><b>④ 贴纸花园</b>替代词光的星图：认识一个词开一朵花，正在学的是花苞。点花会念出这个词，花园本身就是复习。</figcaption>
+  </figure>
+</div>
+
+<h2>家长端</h2>
+<p class="sub">中文，信息密度正常，重点是“线下怎么陪”。</p>
+<div class="phone"><div class="pscreen">
+  <div class="k" style="color:var(--plum-2)">10 月 28 日 · 一起玩了 8 分钟</div>
+  <h4>今天认识了 3 个新词</h4>
+  <div><span class="pill">🐱 cat 猫</span><span class="pill">🐶 dog 狗</span><span class="pill">🦆 duck 鸭子</span></div>
+  <div class="prow"><div class="k">💡 今天的陪玩建议</div>看绘本或出门遇到小狗时，指着问：<br><b style="font-family:var(--read)">“Where is the dog?”</b><br>孩子指对了就开心地说 <b style="font-family:var(--read)">“Yes! A dog!”</b></div>
+  <div class="prow"><div class="k">🌱 小芽阶段进度</div><div style="height:10px;background:#F0E7DA;border-radius:9px;margin-top:6px"><div style="width:22%;height:100%;background:var(--grass);border-radius:9px"></div></div><div class="k" style="margin-top:4px">认识 26 / 120 个词 · 这周玩了 4 天</div></div>
+  <div class="prow"><div class="k">🖨 可打印闪卡</div>农场动物 10 张 · PDF</div>
+  <div class="prow"><div class="k">⏱ 每日时长上限</div>15 分钟 · 到时间芽芽会说晚安</div>
+</div></div>
+
+<h2>坚持什么 · 避免什么</h2>
+<div class="dont">
+  <div><h3>✅ 坚持</h3><ul><li>每次点击都有声音和动画</li><li>每个指令都有语音</li><li>点错只给提示，不给惩罚</li><li>每次学习有明确结尾</li><li>同一个词放在不同句子里听</li></ul></div>
+  <div><h3>🚫 避免</h3><ul><li>红叉、扣分、“错误”音效</li><li>连胜天数、排行榜、倒计时压力</li><li>拖拽、滑动、长按（2–3 岁）</li><li>大段文字、需要读的按钮</li><li>广告、诱导付费、无限刷</li></ul></div>
+</div>
+
+<p class="note">芽芽是方向草稿，不是最终造型；表情符号仅作占位。插画和配音的统一提示词见 规划.md 第 4.4 节。</p>
+</div>
+</body>
+</html>

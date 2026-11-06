@@ -1,0 +1,12 @@
+node_modules
+dist
+.venv
+art/raw
+.DS_Store
+.cache
+output/
+.playwright-cli/
+.claude/
+art/style-test/
+*.tsbuildinfo
+__pycache__/

@@ -1,0 +1,308 @@
+/* Movement uses the same drawing palette as the island. The animal and Sprout mirror one action. */
+.movement-screen {
+  background: #fff8ec;
+}
+.movement-home {
+  position: absolute;
+  z-index: 5;
+  top: calc(14px + env(safe-area-inset-top));
+  left: 16px;
+}
+.movement-rounds {
+  position: absolute;
+  top: calc(19px + env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: clamp(12px, 3vw, 26px);
+}
+.movement-rounds span {
+  width: 31px;
+  height: 46px;
+  color: #dfd6c6;
+}
+.movement-rounds svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+.movement-rounds .now { color: #f0606a; }
+.movement-rounds .done { color: #7cb943; }
+.movement-activity {
+  position: absolute;
+  inset: calc(102px + env(safe-area-inset-top)) 4vw calc(18px + env(safe-area-inset-bottom));
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 8px;
+  color: #3a2e2a;
+}
+.movement-instruction {
+  width: fit-content;
+  max-width: 100%;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 2vw, 18px);
+  padding: 8px 12px 8px clamp(16px, 3vw, 28px);
+  border: 3px solid #3a2e2a;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 5px 0 #3a2e2a14;
+}
+.movement-instruction h1 {
+  margin: 0;
+  font-family: var(--read);
+  font-size: clamp(23px, 4.1vmin, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.movement-replay {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 58px;
+  height: 58px;
+  border: 3px solid #3a2e2a;
+  border-radius: 50%;
+  background: #ffed9d;
+}
+.movement-replay .icon { width: 34px; height: 34px; }
+.movement-stage {
+  position: relative;
+  width: min(100%, 880px);
+  height: 100%;
+  min-height: 0;
+  justify-self: center;
+  isolation: isolate;
+}
+.movement-lawn {
+  position: absolute;
+  z-index: -1;
+  left: 4%;
+  right: 1%;
+  bottom: 5%;
+  height: 31%;
+  border: 3px solid #3a2e2a;
+  border-radius: 50%;
+  background: #a9db6c;
+  box-shadow: 0 8px 0 #76b449;
+}
+.movement-animal-spot {
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  width: 57%;
+  height: 89%;
+}
+.movement-animal {
+  position: absolute;
+  inset: 17% 15% 6%;
+  transform-origin: 50% 90%;
+}
+.movement-animal img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 5px 0 #3a2e2a1a);
+}
+.movement-word-fallback {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  font: 700 clamp(30px, 5vmin, 48px) var(--read);
+}
+.movement-guide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: #3a2e2a;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.movement-trail { stroke: #c17836; stroke-dasharray: 8 11; }
+.movement-arrow { stroke: #c17836; stroke-width: 5; }
+.movement-ground-mark { stroke: #6f9740; stroke-width: 5; }
+.movement-wing { fill: #ffe896; stroke-width: 3; }
+.movement-hoof { fill: #76b449; stroke: #5b8c2e; stroke-width: 3; }
+.movement-animal-shadow,
+.movement-sprout-shadow {
+  position: absolute;
+  left: 30%;
+  width: 40%;
+  bottom: 3%;
+  height: 5%;
+  border-radius: 50%;
+  background: #57813a40;
+  z-index: -1;
+}
+.movement-sprout-spot {
+  position: absolute;
+  width: 29%;
+  aspect-ratio: 1;
+  right: 7%;
+  bottom: 14%;
+}
+.movement-sprout { position: relative; width: 100%; transform-origin: 50% 93%; }
+.movement-sprout .sprout { width: 100%; }
+.movement-sprout-shadow { bottom: -1%; }
+.movement-leaf-arms {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  fill: #7cc452;
+  stroke: #3a2e2a;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+}
+.movement-turn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(22px, 8vw, 90px);
+  min-height: 100px;
+}
+.movement-turn-copy { display: grid; justify-items: center; gap: 12px; }
+.movement-turn-copy > span { font: 600 clamp(23px, 3.5vmin, 32px) var(--round); }
+.movement-beats { display: flex; gap: 11px; }
+.movement-beats i {
+  width: 19px;
+  height: 19px;
+  border: 3px solid #3a2e2a;
+  border-radius: 50%;
+  background: #fff;
+}
+.movement-beats .done { background: #8ccb4e; }
+.movement-beats .now { background: #ffd93b; }
+.movement-next {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 96px;
+  height: 82px;
+  border: 4px solid #3a2e2a;
+  border-radius: 27px;
+  background: #ffd93b;
+  box-shadow: 0 6px 0 #3a2e2a26;
+}
+.movement-next svg { width: 48px; height: 48px; fill: none; stroke: #3a2e2a; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.movement-next:disabled { background: #efe9dc; border-color: #b6a99b; box-shadow: none; cursor: default; }
+.movement-next:disabled svg { stroke: #b6a99b; }
+.movement-replay:active,
+.movement-next:not(:disabled):active { transform: translateY(3px); }
+.movement-activity button:focus-visible,
+.movement-screen button:focus-visible { outline: 5px solid #56c3f9; outline-offset: 5px; }
+
+/* Distinct motions: a raised hop, separate wings, a slow reach and alternating hoof beats. */
+.motion-hop:not(.phase-ready) .movement-animal,
+.motion-hop:not(.phase-ready) .movement-sprout { animation: movement-hop 1.8s ease-in-out infinite; }
+.motion-hop:not(.phase-ready) .movement-animal-shadow { animation: movement-hop-shadow 1.8s ease-in-out infinite; }
+@keyframes movement-hop {
+  0%, 65%, 100% { transform: translateY(0) scale(1); }
+  12% { transform: translateY(4%) scale(1.08, .89); }
+  36% { transform: translateY(-28%) scale(.96, 1.04); }
+  56% { transform: translateY(0) scale(1.07, .92); }
+}
+@keyframes movement-hop-shadow { 36% { transform: scale(.6); opacity: .45; } }
+.movement-wing-left { transform-origin: 104px 160px; }
+.movement-wing-right { transform-origin: 256px 160px; }
+.movement-arm-left { transform-origin: 45px 125px; }
+.movement-arm-right { transform-origin: 155px 125px; }
+.motion-flap:not(.phase-ready) .movement-wing-left,
+.motion-flap:not(.phase-ready) .movement-arm-left { animation: movement-flap-left 1.3s ease-in-out infinite; }
+.motion-flap:not(.phase-ready) .movement-wing-right,
+.motion-flap:not(.phase-ready) .movement-arm-right { animation: movement-flap-right 1.3s ease-in-out infinite; }
+@keyframes movement-flap-left { 50% { transform: rotate(42deg); } }
+@keyframes movement-flap-right { 50% { transform: rotate(-42deg); } }
+.motion-stretch:not(.phase-ready) .movement-animal { animation: movement-cat-stretch 3.6s ease-in-out infinite; }
+.motion-stretch:not(.phase-ready) .movement-sprout { animation: movement-sprout-stretch 3.6s ease-in-out infinite; }
+.motion-stretch .movement-arm-left { transform: rotate(85deg); }
+.motion-stretch .movement-arm-right { transform: rotate(-85deg); }
+@keyframes movement-cat-stretch { 35%, 65% { transform: scale(1.13, .9) translateY(1%); } }
+@keyframes movement-sprout-stretch { 35%, 65% { transform: scale(.88, 1.18) translateY(-5%); } }
+.motion-march:not(.phase-ready) .movement-animal,
+.motion-march:not(.phase-ready) .movement-sprout { animation: movement-march 1.5s ease-in-out infinite; }
+.motion-march:not(.phase-ready) .movement-hoof-left { animation: movement-hoof 1.5s ease-in-out infinite; }
+.motion-march:not(.phase-ready) .movement-hoof-right { animation: movement-hoof 1.5s ease-in-out -.75s infinite; }
+@keyframes movement-march { 25% { transform: translate(-2%, -4%) rotate(-3deg); } 75% { transform: translate(2%, -4%) rotate(3deg); } }
+@keyframes movement-hoof { 0%, 45%, 100% { opacity: 1; transform: translateY(0); } 70% { opacity: .25; transform: translateY(-9px); } }
+
+.movement-ending {
+  position: absolute;
+  inset: 84px 5vw 3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.movement-ending-crown { display: flex; gap: 14px; }
+.movement-ending-crown .icon { width: 48px; height: 48px; }
+.movement-ending-crown .icon:nth-child(2) { margin-top: -15px; }
+.movement-ending-sprout { width: min(30vmin, 240px); }
+.movement-ending h1 { margin: 0; font: 600 clamp(32px, 6vmin, 54px) var(--round); }
+.movement-ending-actions { display: flex; gap: 34px; margin-top: 12px; }
+.movement-again { background: #e4f3cf; }
+
+@media (orientation: portrait) {
+  .movement-activity { top: calc(112px + env(safe-area-inset-top)); gap: 12px; }
+  .movement-stage { max-height: 560px; align-self: center; }
+  .movement-animal-spot { left: 0; width: 65%; height: 85%; bottom: 12%; }
+  .movement-sprout-spot { right: 1%; width: 32%; bottom: 17%; }
+  .movement-lawn { left: 0; right: 0; bottom: 9%; height: 26%; }
+  .movement-turn { padding-bottom: 2vh; }
+}
+@media (max-width: 600px) {
+  .movement-activity { left: 3vw; right: 3vw; top: calc(102px + env(safe-area-inset-top)); gap: 5px; }
+  .movement-home { width: 60px; height: 60px; }
+  .movement-rounds { gap: 10px; top: calc(22px + env(safe-area-inset-top)); }
+  .movement-rounds span { width: 23px; height: 34px; }
+  .movement-instruction { border-radius: 24px; gap: 8px; padding: 9px 9px 9px 15px; }
+  .movement-instruction h1 { font-size: clamp(22px, 6vw, 30px); }
+  .movement-replay { width: 50px; height: 50px; }
+  .movement-turn { gap: 8vw; min-height: 100px; }
+  .movement-next { width: 82px; height: 76px; border-radius: 24px; }
+  .movement-turn-copy > span { font-size: 25px; }
+  .movement-beats { gap: 9px; }
+  .movement-beats i { width: 17px; height: 17px; }
+}
+@media (max-width: 600px) and (orientation: portrait) {
+  /* Keep the two characters large on a phone without pushing the continue button down. */
+  .movement-stage { height: min(100%, 420px); }
+  .movement-animal-spot { left: -3%; width: 75%; }
+  .movement-animal { left: 5%; right: 5%; }
+  .movement-sprout-spot { right: 0; width: 39%; }
+}
+@media (max-width: 600px) and (orientation: portrait) and (min-height: 740px) {
+  .movement-stage { transform: translateY(-24px); }
+}
+@media (max-height: 540px) and (orientation: landscape) {
+  .movement-activity { top: calc(83px + env(safe-area-inset-top)); bottom: 9px; gap: 2px; }
+  .movement-instruction { padding: 4px 6px 4px 16px; }
+  .movement-instruction h1 { font-size: 24px; }
+  .movement-replay { width: 44px; height: 44px; }
+  .movement-turn { min-height: 66px; }
+  .movement-turn-copy { gap: 5px; }
+  .movement-turn-copy > span { font-size: 20px; }
+  .movement-next { width: 80px; height: 60px; border-radius: 21px; }
+  .movement-next svg { width: 37px; height: 37px; }
+  .movement-stage { max-width: 580px; }
+  .movement-sprout-spot { width: min(24%, 26vh); bottom: 13%; }
+  .movement-ending { flex-flow: row wrap; align-content: center; gap: 15px 24px; }
+  .movement-ending-crown { display: none; }
+  .movement-ending-sprout { width: 160px; }
+  .movement-ending-actions { margin: 0; gap: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .movement-activity *,
+  .movement-ending * { animation: none !important; transition: none !important; }
+}

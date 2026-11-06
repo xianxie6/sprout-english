@@ -2,6 +2,8 @@
 
 2–6 岁英语启蒙网页 App（PWA）。**当前为阶段 1 MVP，基本功能已成形，正在做试用前验收；尚未完成家庭试用验收。** 部分阶段 2 功能已提前实现。
 
+**在线体验**：https://xianxie6.github.io/sprout-english/ （推送到 main 后由 GitHub Actions 自动部署到 GitHub Pages）
+
 规划见 [规划.md](规划.md)，视觉见 [风格样板.html](风格样板.html)，设备检查和家庭观察记录见 [试用验收.md](试用验收.md)。
 
 ## 现在有什么
